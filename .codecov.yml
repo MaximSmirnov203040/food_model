@@ -1,0 +1,23 @@
+coverage:
+  status:
+    project:
+      default:
+        target: 80%
+        threshold: 1%
+    patch:
+      default:
+        target: 80%
+        threshold: 1%
+
+comment: false
+
+ignore:
+  - "tests/*"
+  - "scripts/*"
+  - "alembic/*"
+  - "*.pyc"
+  - "__init__.py"
+  - "conftest.py"
+  - "pytest.ini"
+  - "setup.py"
+  - "requirements*.txt" 
