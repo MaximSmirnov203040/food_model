@@ -49,13 +49,21 @@ jobs:
         echo "OPENFOODFACTS_API_KEY=test_key" >> $GITHUB_ENV
         echo "EDAMAM_API_KEY=test_key" >> $GITHUB_ENV
         echo "USDA_API_KEY=test_key" >> $GITHUB_ENV
+        echo "PYTHONPATH=$PYTHONPATH:${GITHUB_WORKSPACE}" >> $GITHUB_ENV
+
+    - name: Run database migrations
+      run: |
+        alembic upgrade head
 
     - name: Run tests with coverage
       run: |
-        pytest --cov=app --cov-report=xml
+        pytest --cov=app --cov-report=xml -v
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
         file: ./coverage.xml
-        fail_ci_if_error: true 
+        fail_ci_if_error: true
+        env_vars: OS,PYTHON
+        name: codecov-umbrella
+        verbose: true 
