@@ -1,5 +1,9 @@
 # Food Recommendation System
 
+[![Tests](https://github.com/MaximSmirnov203040/food_model/actions/workflows/test.yml/badge.svg)](https://github.com/MaximSmirnov203040/food_model/actions/workflows/test.yml)
+[![codecov](https://codecov.io/gh/MaximSmirnov203040/food_model/branch/main/graph/badge.svg)](https://codecov.io/gh/MaximSmirnov203040/food_model)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A comprehensive food recommendation system that provides personalized recipe suggestions based on user preferences, dietary restrictions, and nutritional goals.
 
 ## Features
